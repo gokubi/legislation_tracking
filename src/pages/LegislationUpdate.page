@@ -1,0 +1,8 @@
+<apex:page standardController="Legislation__c" extensions="LegislationUpdateControllerExt" action="{!refresh}">
+	<apex:form >
+		<apex:inputHidden value="{!Legislation__c.Active__c}" />
+		<apex:inputHidden value="{!Legislation__c.Bill_Prefix__c}" />
+		<apex:inputHidden value="{!Legislation__c.Bill_Number__c}" />
+		<apex:inputHidden value="{!Legislation__c.Congressional_Session__c}" />
+	</apex:form>
+</apex:page>

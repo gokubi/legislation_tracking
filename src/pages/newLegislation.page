@@ -1,0 +1,33 @@
+<apex:page standardController="Legislation__c" extensions="newLegislationControllerExt" action="{!autoParseThomas}">
+<apex:form >
+<apex:message id="errorMessages" />
+<apex:outputPanel id="leginsertmessages" >
+<apex:pageMessage summary="{!legislationInsertErrorText}" severity="error" strength="2"  rendered="{!legislationInsertError}"/>
+</apex:outputPanel>
+<apex:pageBlock title="New Legislation by info" mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!insertLegislation}" value="Create" rerender="errorMessages,parsemessages,leginsertmessages"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Bill info" columns="1">
+                <apex:inputField value="{!legislation.Bill_Prefix__c}"/>
+				<apex:inputField value="{!legislation.Bill_Number__c}"/>
+				<apex:inputField value="{!legislation.Congressional_Session__c}"/>
+ 				
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="New Legislation by Thomas URL" mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!insertLegislation}" value="Create" rerender="errorMessages,parsemessages,leginsertmessages"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Thomas link" columns="1">
+                
+                URL: <apex:inputText value="{!thomasURL}" size="100"/>
+                <apex:outputPanel id="parsemessages" >
+                <apex:pageMessage summary="{!URLParseErrorText}" severity="Error" strength="3" rendered="{!URLParseError}"/>
+                </apex:outputPanel> 
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+</apex:form>
+</apex:page>
