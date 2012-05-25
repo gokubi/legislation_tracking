@@ -34,6 +34,7 @@
     </actionOverrides>
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
@@ -523,83 +524,6 @@ HYPERLINK(&quot;http://hdl.loc.gov/loc.uscongress/legislation.&quot; + text(Cong
         <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>
-    <namedFilters>
-        <fullName>nf_01IS00000000oxlMAA_00NS0000000o0qvMAA</fullName>
-        <active>true</active>
-        <field>PRec_Leg_junction__c.Legislation__c</field>
-        <filterItems>
-            <field>Legislation__c.Active__c</field>
-            <operation>equals</operation>
-            <value>True</value>
-        </filterItems>
-        <isOptional>true</isOptional>
-        <name>Issue covered in Legislation_Related Leg</name>
-    </namedFilters>
-    <namedFilters>
-        <fullName>nf_01IS00000000oxqMAA_00NS0000000o0rZMAQ</fullName>
-        <active>true</active>
-        <field>Corresponding_Bill__c.Legislation1__c</field>
-        <filterItems>
-            <field>Legislation__c.Legislative_Body__c</field>
-            <operation>notEqual</operation>
-            <valueField>Legislation__c.Legislative_Body__c</valueField>
-        </filterItems>
-        <filterItems>
-            <field>Legislation__c.Legislative_Body__c</field>
-            <operation>notEqual</operation>
-            <value></value>
-        </filterItems>
-        <isOptional>true</isOptional>
-        <name>Corresponding Bill_Legislation1</name>
-    </namedFilters>
-    <namedFilters>
-        <fullName>nf_01IS00000000oxqMAA_00NS0000000o0reMAA</fullName>
-        <active>false</active>
-        <field>Corresponding_Bill__c.Legislation2__c</field>
-        <filterItems>
-            <field>Legislation__c.Legislative_Body__c</field>
-            <operation>notEqual</operation>
-            <valueField>Legislation__c.Legislative_Body__c</valueField>
-        </filterItems>
-        <isOptional>false</isOptional>
-        <name>Corresponding Bill_Legislation2</name>
-    </namedFilters>
-    <namedFilters>
-        <fullName>nf_01IS00000000oxvMAA_00NS0000000o0rjMAA</fullName>
-        <active>true</active>
-        <field>Legislation_DC_Event_relationship__c.Legislation__c</field>
-        <filterItems>
-            <field>Legislation__c.Active__c</field>
-            <operation>equals</operation>
-            <value>True</value>
-        </filterItems>
-        <isOptional>true</isOptional>
-        <name>Legislation DC Event relationship_Relate</name>
-    </namedFilters>
-    <namedFilters>
-        <fullName>nf_01IS00000000pXAMAY_00NS0000000o9fNMAQ</fullName>
-        <active>true</active>
-        <field>Contact_Leg_junction__c.Legislation__c</field>
-        <filterItems>
-            <field>Legislation__c.Active__c</field>
-            <operation>equals</operation>
-            <value>True</value>
-        </filterItems>
-        <isOptional>true</isOptional>
-        <name>Contact Related to Legislation_Legislati</name>
-    </namedFilters>
-    <namedFilters>
-        <fullName>nf_01IS00000000y4lMAA_00NS0000000q0buMAA</fullName>
-        <active>true</active>
-        <field>Focus_related_to_Legislation__c.Related_Legislation__c</field>
-        <filterItems>
-            <field>Legislation__c.Active__c</field>
-            <operation>equals</operation>
-            <value>True</value>
-        </filterItems>
-        <isOptional>true</isOptional>
-        <name>P-Issue related to Legislation_Legislati</name>
-    </namedFilters>
     <pluralLabel>Legislation</pluralLabel>
     <searchLayouts>
         <customTabListAdditionalFields>Full_Bill_Number__c</customTabListAdditionalFields>

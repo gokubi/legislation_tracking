@@ -21,8 +21,11 @@
         <name>ApexTrigger</name>
     </types>
     <types>
+        <members>Contact_Leg_junction__c</members>
+        <members>Corresponding_Bill__c</members>
         <members>Legislation__c</members>
         <members>Legislator_Vote__c</members>
+        <members>RealTimeCongress_Settings__c</members>
         <members>Roll_Vote__c</members>
         <name>CustomObject</name>
     </types>

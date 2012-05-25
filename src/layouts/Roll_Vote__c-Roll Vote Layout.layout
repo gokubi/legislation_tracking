@@ -89,7 +89,6 @@
         <style>CustomLinks</style>
     </layoutSections>
     <relatedLists>
-        <fields>Contact.kw__Full_Name_link__c</fields>
         <fields>Vote__c</fields>
         <fields>IAVA_Vote_Score__c</fields>
         <fields>Account.ACC_NAME</fields>

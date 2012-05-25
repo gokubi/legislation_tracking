@@ -171,7 +171,6 @@
         <relatedList>Corresponding_Bill__c.Legislation2__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>Contact.Full_Name__c</fields>
         <fields>Account.ACC_NAME</fields>
         <fields>Role__c</fields>
         <fields>NAME</fields>
@@ -184,23 +183,11 @@
         <fields>TASK.SUBJECT</fields>
         <fields>CORE.USERS.FULL_NAME</fields>
         <fields>TASK.WHO_NAME</fields>
-        <fields>Ask_Objective__c</fields>
         <fields>ACTIVITY.TASK</fields>
         <fields>TASK.DUE_DATE</fields>
         <fields>TASK.STATUS</fields>
         <fields>TASK.PRIORITY</fields>
         <relatedList>RelatedActivityList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>Activity_Junction__c.Date_of_Call__c</fields>
-        <fields>Activity_Junction__c.Contact__c</fields>
-        <fields>Activity_Junction__c.NAME</fields>
-        <fields>Activity_Junction__c.Assigned_To__c</fields>
-        <fields>Activity_Junction__c.Call_Notes__c</fields>
-        <fields>Activity_Junction__c.Status__c</fields>
-        <relatedList>Activity_Junction_to_Legislation__c.Legislation__c</relatedList>
-        <sortField>Activity_Junction__c.Date_of_Call__c</sortField>
-        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
         <excludeButtons>LogCall</excludeButtons>
@@ -210,40 +197,12 @@
         <fields>TASK.SUBJECT</fields>
         <fields>CORE.USERS.FULL_NAME</fields>
         <fields>TASK.WHO_NAME</fields>
-        <fields>Ask_Objective__c</fields>
         <fields>ACTIVITY.TASK</fields>
         <fields>TASK.STATUS</fields>
         <fields>TASK.CALLDISPOSITION</fields>
         <fields>TASK.CALLDURATION</fields>
         <fields>TASK.LAST_UPDATE</fields>
         <relatedList>RelatedHistoryList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>Policy_Rec__c.NAME</fields>
-        <fields>Parent_Issue__c</fields>
-        <fields>Policy_Rec__c.Status__c</fields>
-        <fields>Policy_Rec__c.Priority__c</fields>
-        <fields>Policy_Rec__c.Active__c</fields>
-        <fields>NAME</fields>
-        <relatedList>PRec_Leg_junction__c.Legislation__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>Focus_Area__c.NAME</fields>
-        <fields>Focus_Area__c.Type__c</fields>
-        <fields>Focus_Area__c.Active__c</fields>
-        <fields>Focus_Area__c.Priority__c</fields>
-        <fields>Owner.CUSTENT_OWNER_NAME</fields>
-        <fields>Focus_Area__c.Research_Lead__c</fields>
-        <fields>NAME</fields>
-        <relatedList>Focus_related_to_Legislation__c.Related_Legislation__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>DC_Event__c.NAME</fields>
-        <fields>DC_Event__c.Date_and_Time__c</fields>
-        <fields>DC_Event__c.Type__c</fields>
-        <fields>DC_Event__c.Committee__c</fields>
-        <fields>NAME</fields>
-        <relatedList>Legislation_DC_Event_relationship__c.Legislation__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
