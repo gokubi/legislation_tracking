@@ -116,7 +116,7 @@ public class RealTimeCongressAPI {
 
     
     public RealTimeCongressAPI() {
-        RealTimeCongress_Settings__c rs = RealTimeCongress_Settings__c.getInstance('IAVA');
+        RealTimeCongress_Settings__c rs = RealTimeCongress_Settings__c.getInstance('RealTimeCongress');
         if (rs != null) {
             Endpoint = rs.Endpoint__c;
             APIKey = rs.APIKey__c;
@@ -124,8 +124,6 @@ public class RealTimeCongressAPI {
             // defaults
             Endpoint = 'http://api.realtimecongress.org/api/v1';
             APIKey = 'e875910d16c32457b55036aeaa2194f1';
-            //APIKey = '21606eb369514fec9d9573ce931f6b2a';  // iava@exponentpartners.com
-            //APIKey = '178c1e3ad08545c3920f81fc0f348ce4';  // wai@exponentpartners.com
         }
         
         recordCount = 0;

@@ -90,7 +90,7 @@
     </layoutSections>
     <relatedLists>
         <fields>Vote__c</fields>
-        <fields>IAVA_Vote_Score__c</fields>
+        <fields>Our_Vote_Score__c</fields>
         <fields>Account.ACC_NAME</fields>
         <fields>LegVoteId__c</fields>
         <fields>Congressional_Session__c</fields>

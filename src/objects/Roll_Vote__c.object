@@ -145,9 +145,9 @@
     <fields>
         <fullName>Score_This_Vote__c</fullName>
         <defaultValue>false</defaultValue>
-        <description>If checked, this vote will count towards IAVA&apos;s scoring system for legislators.</description>
+        <description>If checked, this vote will count towards our scoring system for legislators.</description>
         <externalId>false</externalId>
-        <inlineHelpText>If checked, this vote will count towards IAVA&apos;s scoring system for legislators.</inlineHelpText>
+        <inlineHelpText>If checked, this vote will count towards our scoring system for legislators.</inlineHelpText>
         <label>Score This Vote</label>
         <type>Checkbox</type>
     </fields>

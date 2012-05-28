@@ -39,7 +39,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>IAVA_Vote_Score__c</field>
+                <field>Our_Vote_Score__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>

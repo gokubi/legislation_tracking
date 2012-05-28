@@ -43,9 +43,9 @@
     <fields>
         <fullName>Active__c</fullName>
         <defaultValue>true</defaultValue>
-        <description>Whether IAVA is currently tracking this bill</description>
+        <description>Whether we are currently tracking this bill</description>
         <externalId>false</externalId>
-        <inlineHelpText>Whether IAVA is currently tracking this bill</inlineHelpText>
+        <inlineHelpText>Whether we are currently tracking this bill</inlineHelpText>
         <label>Active</label>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
@@ -364,10 +364,10 @@
     </fields>
     <fields>
         <fullName>Position__c</fullName>
-        <description>IAVA&apos;s position on the bill</description>
+        <description>Our position on the bill</description>
         <externalId>false</externalId>
-        <inlineHelpText>IAVA&apos;s position on the bill</inlineHelpText>
-        <label>IAVA Position</label>
+        <inlineHelpText>Our position on the bill</inlineHelpText>
+        <label>Our Position</label>
         <picklist>
             <picklistValues>
                 <fullName>Review Board</fullName>

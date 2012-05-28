@@ -60,18 +60,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>IAVA_Vote_Score__c</fullName>
-        <description>1 point if vote is Yea and IAVA Position is &quot;Support&quot;, or if vote is Nay and IAVA Position is &quot;Oppose&quot;.  Updated by workflow rule.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>1 point if vote is Yea and IAVA Position is &quot;Support&quot;, or if vote is Nay and IAVA Position is &quot;Oppose&quot;.  Updated by workflow rule.  May not update is IAVA Position is changed after the vote.</inlineHelpText>
-        <label>IAVA Vote Score</label>
-        <precision>1</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>LegVoteId__c</fullName>
         <caseSensitive>false</caseSensitive>
         <externalId>true</externalId>
@@ -92,6 +80,18 @@
         <relationshipOrder>1</relationshipOrder>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Our_Vote_Score__c</fullName>
+        <description>1 point if vote is Yea and our Position is &quot;Support&quot;, or if vote is Nay and our Position is &quot;Oppose&quot;.  Updated by workflow rule.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>1 point if vote is Yea and our Position is &quot;Support&quot;, or if vote is Nay and our Position is &quot;Oppose&quot;.  Updated by workflow rule.  May not update if our Position is changed after the vote.</inlineHelpText>
+        <label>Our Vote Score</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Roll_Vote__c</fullName>
