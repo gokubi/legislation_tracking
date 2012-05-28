@@ -127,13 +127,14 @@ public class LegislationAction {
         Boolean doUpdate = false;
         String officialTitle, shortTitle, status, lastAction, summary, introducedAt, sponsorId;
         Set<String> cosponsorIds;
+        String billId;
         
         RealTimeCongressAPI api = new RealTimeCongressAPI();
         
         // Get officalTitle, shortTitle, status, lastAction, sponsorId, and cosponsorIds
         if (api.getBill(billPrefix, billNumber, session)) {
             doUpdate = true;
-            String billId = billPrefix + billNumber + '-' + session;
+            billId = billPrefix + billNumber + '-' + session;
             officialTitle = api.legDetailMap.get(billId).getOfficialTitle();
             shortTitle = api.legDetailMap.get(billId).getShortTitle();
             status = api.legDetailMap.get(billId).getStatus();
@@ -147,7 +148,7 @@ public class LegislationAction {
         // Update the Legislation record
         //  - use shortTitle if exists otherwise officialTitle
         if (doUpdate) {
-            updateBillRecord(legId, (shortTitle != null) ? shortTitle : officialTitle, status, lastAction, summary, introducedAt, sponsorId, cosponsorIds);
+            updateBillRecord(legId, billId, (shortTitle != null) ? shortTitle : officialTitle, status, lastAction, summary, introducedAt, sponsorId, cosponsorIds);
         } else {
             System.debug('>>>>>>>>>> Callout to get bill detail failed');
         }
@@ -234,11 +235,14 @@ public class LegislationAction {
     }
     
     // Update Legislation record with info returned from web services
-    private static void updateBillRecord(Id legId, String title, String status, String lastAction, String summary, String introducedAt, String sponsorId, Set<String> cosponsorIds) {
+    private static void updateBillRecord(Id legId, String billId, String title, String status, String lastAction, String summary, String introducedAt, String sponsorId, Set<String> cosponsorIds) {
         try {
             // Select Legislation record to update
-            Legislation__c l = [select Id, Sponsor__c, (select Contact__c, Role__c from Contact_Leg__r where Role__c = 'Co-sponsor') from Legislation__c where Id = :legId limit 1];
-            
+            Legislation__c l = [select Id, Name, bill_id__c,Sponsor__c, (select Contact__c, Role__c from Contact_Leg__r where Role__c = 'Co-sponsor') from Legislation__c where Id = :legId limit 1];
+            if(billId!=null){
+            	l.Name = billId;
+            	l.bill_id__c = billId;
+            }
             l.Bill_Title__c = (title != null  && title.length() > Legislation__c.Bill_Title__c.getDescribe().getLength()) ? title.substring(0, Legislation__c.Bill_Title__c.getDescribe().getLength()) : title;
             l.Status__c = (status != null  && status.length() > Legislation__c.Status__c.getDescribe().getLength()) ? status.substring(0, Legislation__c.Status__c.getDescribe().getLength()) : status;
             l.Latest_Major_Action__c = (lastAction != null  && lastAction.length() > Legislation__c.Latest_Major_Action__c.getDescribe().getLength()) ? lastAction.substring(0, Legislation__c.Latest_Major_Action__c.getDescribe().getLength()) : lastAction;
@@ -398,7 +402,7 @@ public class LegislationAction {
         Contact_Leg_junction__c otherjunction = new Contact_Leg_junction__c(Contact__c = cosponsors[0].Id, Legislation__c = testBill.Id, Role__c = 'Other');
         insert otherjunction;
         
-        LegislationAction.updateBillRecord(testBill.Id, 'Test title', 'Pending President signature', 'Passed in Senate', 'Great summary', '2011-02-10T12:00:00Z', 'S00001', new Set<String> { 'CS00077', 'CS00099' });
+        LegislationAction.updateBillRecord(testBill.Id, 'H.R.5652-112','Test title', 'Pending President signature', 'Passed in Senate', 'Great summary', '2011-02-10T12:00:00Z', 'S00001', new Set<String> { 'CS00077', 'CS00099' });
         
         Legislation__c updatedBill = [select Bill_Title__c, Cosponsors__c, Latest_Major_Action__c, Summary__c, Introduced_Date__c, Date_Bill_Info_Updated__c, Sponsor__c, Sponsor_Info__c, Status__c from Legislation__c where Id = :testBill.Id limit 1];
         System.assertEquals('Test title', updatedBill.Bill_Title__c);
