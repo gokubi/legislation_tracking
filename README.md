@@ -11,7 +11,5 @@ Setup
 -----
 
 1. deploy code
-2. create custom tab for Legislation object
 2. override new button for legislation: newLegislation visualforce page
-3. create remote site setting for http://api.realtimecongress.org
-4. create permission set and assign
+3. assign Legislation Admin permission set to desired users
