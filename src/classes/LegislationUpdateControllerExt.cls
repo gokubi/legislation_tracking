@@ -9,7 +9,7 @@ public class LegislationUpdateControllerExt {
 	public PageReference refresh() {
 		if (legislation.Active__c)
 			LegislationAction.getLegislationDetail(legislation);
-		//return new PageReference('/' + legislation.Id);
-		return new PageReference('/a0y/o');
+		return new PageReference('/' + legislation.Id);
+		//return new PageReference('/a0y/o');
 	}
 }
