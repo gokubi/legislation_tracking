@@ -54,8 +54,12 @@ public class LegislationAction {
     private static void updateAmendmentRecord(Id legId, String billId, String purpose, String status, String lastAction, String introducedAt, String sponsorId) {
         try {
             // Select Legislation record to update
-            Legislation__c l = [select Id, Sponsor__c, (select Legislation1__c from Corresponding_Bill2__r) from Legislation__c where Id = :legId limit 1];
+            Legislation__c l = [select Id, Name, Bill_Id__c, Sponsor__c, (select Legislation1__c from Corresponding_Bill2__r) from Legislation__c where Id = :legId limit 1];
             
+            if(billId!=null){
+            	l.Name = billId;
+            	l.bill_id__c = billId;
+            }
             l.Bill_Title__c = (purpose != null  && purpose.length() > Legislation__c.Bill_Title__c.getDescribe().getLength()) ? purpose.substring(0, Legislation__c.Bill_Title__c.getDescribe().getLength()) : purpose;
             l.Status__c = (status != null  && status.length() > Legislation__c.Status__c.getDescribe().getLength()) ? status.substring(0, Legislation__c.Status__c.getDescribe().getLength()) : status;
             l.Latest_Major_Action__c = (lastAction != null  && lastAction.length() > Legislation__c.Latest_Major_Action__c.getDescribe().getLength()) ? lastAction.substring(0, Legislation__c.Latest_Major_Action__c.getDescribe().getLength()) : lastAction;

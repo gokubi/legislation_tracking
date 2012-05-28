@@ -40,5 +40,9 @@
         <members>*</members>
         <name>PermissionSet</name>
     </types>
+    <types>
+        <members>RealTimeCongressAPI</members>
+        <name>RemoteSiteSetting</name>
+    </types>
     <version>24.0</version>
 </Package>
