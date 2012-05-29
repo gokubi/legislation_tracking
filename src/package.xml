@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
+        <members>JSONObject</members>
+        <members>LegislationAction</members>
+        <members>LegislationUpdateBatchable</members>
+        <members>LegislationUpdateBatchableTest</members>
+        <members>LegislationUpdateControllerExt</members>
+        <members>LegislationUpdateScheduler</members>
+        <members>RealTimeCongressAPI</members>
+        <members>newLegislationControllerExt</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>*</members>
+        <members>LegislationUpdate</members>
+        <members>newLegislation</members>
         <name>ApexPage</name>
     </types>
     <types>
-        <members>*</members>
+        <members>LegislationAfterInsert</members>
         <name>ApexTrigger</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Legislation</members>
         <name>CustomApplication</name>
     </types>
     <types>
@@ -27,7 +35,7 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Legislation__c</members>
         <name>CustomTab</name>
     </types>
     <types>
@@ -37,7 +45,7 @@
         <name>Layout</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Legislation_Admin</members>
         <name>PermissionSet</name>
     </types>
     <types>
