@@ -13,3 +13,7 @@ Setup
 1. deploy code
 2. override new button for legislation: newLegislation visualforce page
 3. assign Legislation Admin permission set to desired users
+
+Credits
+-------
+Code contributed by Iraq and Afghanistan Veterans of America. Originally written by Exponent Partners. Modified by Salesforce.com Foundation. 
